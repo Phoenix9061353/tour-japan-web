@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Global */
 * {
   padding: 0;
@@ -60,6 +59,7 @@ body header nav ul {
   align-items: center;
   justify-content: space-around;
   list-style-type: none;
+  margin-bottom: 0.3rem;
 }
 body header nav ul li a {
   color: black;
@@ -74,14 +74,23 @@ body header nav ul li a:hover {
 }
 body main section.background-img {
   min-height: 70vh;
-  background-image: url("../images/日本櫻花.jpg");
-  background-size: cover;
-  background-position: center;
-  position: relative;
   z-index: 0;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+body main section.background-img #carouselExampleSlidesOnly {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+body main section.background-img #carouselExampleSlidesOnly .carousel-inner .carousel-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 70vh;
 }
 body main section.background-img div.filter {
   background-color: black;

@@ -12,6 +12,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
@@ -42,6 +49,35 @@
     </header>
     <main>
       <section class="background-img">
+        <div
+          id="carouselExampleSlidesOnly"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./images/日本櫻花.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images/京都古城.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images/大阪街頭.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+        </div>
         <div class="filter"></div>
         <h3>休閒空間，特殊假期。<br />安排一趟日本旅遊行程，放鬆身心。</h3>
       </section>
@@ -109,7 +145,13 @@
         /></a>
       </section>
     </footer>
-    <script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- <script>
       setInterval(() => {
         const topBackGround = document.querySelector('section.background-img');
         if (
@@ -124,6 +166,6 @@
           topBackGround.style.backgroundImage = 'url("../images/日本櫻花.jpg")';
         }
       }, 3500);
-    </script>
+    </script> -->
   </body>
 </html>
