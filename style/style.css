@@ -39,6 +39,7 @@ header section.logo {
   display: flex;
   align-items: center;
   flex: 2 1 400px;
+  padding: 0.5rem 1rem;
 }
 header section.logo img {
   width: 6vw;
@@ -46,6 +47,7 @@ header section.logo img {
 }
 header section.logo h1 {
   font-size: 2.5rem;
+  margin-bottom: 0;
 }
 header nav {
   flex: 5 1 500px;
@@ -148,6 +150,7 @@ main section.empty-container {
 main section.empty-container h3 {
   font-size: 2rem;
   color: white;
+  text-align: center;
 }
 main section.google-map {
   background-color: white;
@@ -211,10 +214,19 @@ footer section.links img {
 .popup__content {
   position: relative;
   background-color: #eee;
+  border-radius: 2px;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   width: 40vw;
   margin: 15rem auto;
   padding: 4rem;
+}
+.popup__header {
+  margin-bottom: 2rem;
+  font-weight: 500;
+  background-image: linear-gradient(to left, rgb(182, 132, 235), rgb(112, 42, 186));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .popup__form-group {
   margin-bottom: 1.5rem;
@@ -232,10 +244,10 @@ footer section.links img {
 .popup__form-input:focus {
   outline: none;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-  border-bottom: 3px solid rgba(153, 57, 255, 0.5);
+  border-bottom: 3px solid rgb(112, 42, 186);
 }
 .popup__form-input:focus:invalid {
-  border-bottom: 3px solid rgb(112, 42, 186);
+  border-bottom: 3px solid rgba(153, 57, 255, 0.5);
 }
 .popup__form-label {
   font-size: 1rem;
@@ -267,7 +279,7 @@ footer section.links img {
 }
 .popup__form-btn:hover {
   background-color: rgba(153, 57, 255, 0.5);
-  transform: translateY(-1.5px);
+  transform: scale(1.05) translateY(-2px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 .popup:target {
@@ -281,7 +293,8 @@ footer section.links img {
 }
 .popup__close:link, .popup__close:visited {
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 2.5rem;
+  font-weight: 600;
   color: #000;
   transform: all 0.2s;
 }
@@ -296,9 +309,6 @@ footer section.links img {
   }
   body header nav ul li a:hover {
     border-bottom: 2px solid currentColor;
-  }
-  body footer section.logo img {
-    width: 15vw;
   }
 }
 @media screen and (max-width: 700px) {
@@ -320,5 +330,14 @@ footer section.links img {
   }
   body header ul li {
     padding: 0.5rem 0.25rem;
+  }
+  body .popup__content {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 450px) {
+  main section.background-img h3,
+  main section.empty-container h3 {
+    margin: 0 3rem;
   }
 }/*# sourceMappingURL=style.css.map */
